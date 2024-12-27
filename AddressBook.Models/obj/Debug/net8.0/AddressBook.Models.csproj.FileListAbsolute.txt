@@ -1,0 +1,12 @@
+C:\Assignments\AddressBook\AddressBook.Models\bin\Debug\net8.0\AddressBook.Models.deps.json
+C:\Assignments\AddressBook\AddressBook.Models\bin\Debug\net8.0\AddressBook.Models.dll
+C:\Assignments\AddressBook\AddressBook.Models\bin\Debug\net8.0\AddressBook.Models.pdb
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\AddressBook.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\AddressBook.Models.AssemblyInfoInputs.cache
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\AddressBook.Models.AssemblyInfo.cs
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\AddressBook.Models.csproj.CoreCompileInputs.cache
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\AddressBook.Models.sourcelink.json
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\AddressBook.Models.dll
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\refint\AddressBook.Models.dll
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\AddressBook.Models.pdb
+C:\Assignments\AddressBook\AddressBook.Models\obj\Debug\net8.0\ref\AddressBook.Models.dll

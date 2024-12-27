@@ -1,0 +1,11 @@
+C:\Assignments\AddressBook\AddressBook.Exceptions\bin\Debug\net8.0\AddressBook.Exceptions.deps.json
+C:\Assignments\AddressBook\AddressBook.Exceptions\bin\Debug\net8.0\AddressBook.Exceptions.dll
+C:\Assignments\AddressBook\AddressBook.Exceptions\bin\Debug\net8.0\AddressBook.Exceptions.pdb
+C:\Assignments\AddressBook\AddressBook.Exceptions\obj\Debug\net8.0\AddressBook.Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Assignments\AddressBook\AddressBook.Exceptions\obj\Debug\net8.0\AddressBook.Exceptions.AssemblyInfoInputs.cache
+C:\Assignments\AddressBook\AddressBook.Exceptions\obj\Debug\net8.0\AddressBook.Exceptions.AssemblyInfo.cs
+C:\Assignments\AddressBook\AddressBook.Exceptions\obj\Debug\net8.0\AddressBook.Exceptions.csproj.CoreCompileInputs.cache
+C:\Assignments\AddressBook\AddressBook.Exceptions\obj\Debug\net8.0\AddressBook.Exceptions.dll
+C:\Assignments\AddressBook\AddressBook.Exceptions\obj\Debug\net8.0\refint\AddressBook.Exceptions.dll
+C:\Assignments\AddressBook\AddressBook.Exceptions\obj\Debug\net8.0\AddressBook.Exceptions.pdb
+C:\Assignments\AddressBook\AddressBook.Exceptions\obj\Debug\net8.0\ref\AddressBook.Exceptions.dll

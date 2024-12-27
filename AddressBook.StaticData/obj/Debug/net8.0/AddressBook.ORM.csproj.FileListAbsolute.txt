@@ -1,0 +1,16 @@
+C:\Assignments\AddressBook\AddressBook.StaticData\bin\Debug\net8.0\AddressBook.ORM.deps.json
+C:\Assignments\AddressBook\AddressBook.StaticData\bin\Debug\net8.0\AddressBook.ORM.dll
+C:\Assignments\AddressBook\AddressBook.StaticData\bin\Debug\net8.0\AddressBook.ORM.pdb
+C:\Assignments\AddressBook\AddressBook.StaticData\bin\Debug\net8.0\AddressBook.Models.dll
+C:\Assignments\AddressBook\AddressBook.StaticData\bin\Debug\net8.0\AddressBook.Models.pdb
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressBook.ORM.csproj.AssemblyReference.cache
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressBook.ORM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressBook.ORM.AssemblyInfoInputs.cache
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressBook.ORM.AssemblyInfo.cs
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressBook.ORM.csproj.CoreCompileInputs.cache
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressBook.ORM.sourcelink.json
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressB.4FCB7DCC.Up2Date
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressBook.ORM.dll
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\refint\AddressBook.ORM.dll
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\AddressBook.ORM.pdb
+C:\Assignments\AddressBook\AddressBook.StaticData\obj\Debug\net8.0\ref\AddressBook.ORM.dll

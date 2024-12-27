@@ -13,5 +13,6 @@ namespace AddressBook.ORM.Interfaces
         void AddEmailAddress(EmailAddress emailAddress);
         void UpdateEmailAddress(EmailAddress emailAddress);
         void DeleteEmailAddress(string emailId, string contactId);
+        void RestoreEmailAddress(string emailId, string contactId);
     }
 }

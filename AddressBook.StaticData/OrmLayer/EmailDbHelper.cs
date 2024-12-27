@@ -29,10 +29,17 @@ namespace AddressBook.ORM.OrmLayer
                 throw new ArgumentNullException("Contact object is null or empty");
             }
 
-            string emailQuery = "SELECT * FROM EmailAddresses where ContactId=@ContactId";
+            string emailQuery = "SELECT * FROM EmailAddresses where IsDeleted=0 AND ContactId=@ContactId";
             var emails = _genericDbHelper.FetchData<EmailAddress>(emailQuery, MapEmailAddress, new SqlParameter("@ContactId", contactId));
 
             return emails;
+        }
+        private EmailAddress FetchEmailAddressById(string emailId)
+        {
+            string emailQuery = "SELECT * FROM EmailAddresses where Id=@Id";
+            var emailAddresses = _genericDbHelper.FetchData<EmailAddress>(emailQuery, MapEmailAddress, new SqlParameter("@Id", emailId));
+
+            return emailAddresses.FirstOrDefault()!;
         }
         public void AddEmailAddress(EmailAddress emailAddress)
         {
@@ -73,9 +80,21 @@ namespace AddressBook.ORM.OrmLayer
             {
                 throw new ArgumentNullException("Contact object is null or empty");
             }
+            var emailAddress = FetchEmailAddressById(emailId);
+            string updateEmailQuery = "UPDATE EmailAddresses SET IsDeleted=1 Where Id=@Id AND ContactId=@ContactId";
+            _genericDbHelper.DeleteRecord(updateEmailQuery, new SqlParameter("@Id", emailId), new SqlParameter("@ContactId", contactId));
+        }
+        public void RestoreEmailAddress(string emailId, string contactId)
+        {
+            var emailAdderss = FetchEmailAddressById(emailId);
 
-            string deleteEmailQuery = "DELETE FROM EmailAddresses Where Id=@Id AND ContactId=@ContactId";
-            _genericDbHelper.DeleteRecord(deleteEmailQuery, new SqlParameter("@Id", emailId), new SqlParameter("@ContactId", contactId));
+            if (emailAdderss == null)
+            {
+                throw new ArgumentNullException("Object is null or email address does not exist");
+            }
+
+            string updateEmailAddressQuery = "UPDATE EmailAddresses SET IsDeleted = 0 WHERE Id = @Id AND ContactId=@ContactId";
+            _genericDbHelper.DeleteRecord(updateEmailAddressQuery, new SqlParameter("@Id", emailId), new SqlParameter("@ContactId", contactId));
         }
         private EmailAddress MapEmailAddress(SqlDataReader reader)
         {

@@ -28,10 +28,17 @@ namespace AddressBook.ORM.OrmLayer
                 throw new ArgumentNullException("Contact object is null or empty");
             }
 
-            string phonNumberQuery = "SELECT * FROM PhoneNumbers Where ContactId=@ContactId";
-            var phoneNumbers = _genericDbHelper.FetchData<PhoneNumber>(phonNumberQuery, MapPhoneNumber, new SqlParameter("@ContactId", contactId));
+            string phoneNumberQuery = "SELECT * FROM PhoneNumbers Where IsDeleted=0 AND ContactId=@ContactId";
+            var phoneNumbers = _genericDbHelper.FetchData<PhoneNumber>(phoneNumberQuery, MapPhoneNumber, new SqlParameter("@ContactId", contactId));
 
             return phoneNumbers;
+        }
+        private PhoneNumber FetchPhoneNumberById(string phoneNumberId)
+        {
+            string phoneNumberQuery = "SELECT * FROM Phonenumbers where Id=@Id";
+            var phoneNumbers = _genericDbHelper.FetchData<PhoneNumber>(phoneNumberQuery, MapPhoneNumber, new SqlParameter("@Id", phoneNumberId));
+
+            return phoneNumbers.FirstOrDefault()!;
         }
         public void AddPhoneNumber(PhoneNumber phoneNumber)
         {
@@ -73,9 +80,26 @@ namespace AddressBook.ORM.OrmLayer
             {
                 throw new ArgumentNullException("Cannot object is null or empty");
             }
+            var phoneNumber = FetchPhoneNumberById(phoneId);
 
-            string deletepPhoneQuery = "DELETE FROM Phonenumbers Where Id=@Id AND ContactId=@ContactId";
-            _genericDbHelper.DeleteRecord(deletepPhoneQuery, new SqlParameter("@Id", phoneId), new SqlParameter("@ContactId", contactId));
+            if (phoneNumber == null)
+            {
+                throw new ArgumentNullException("Cannot object is null or phone number does not exist");
+            }
+            string updatePhoneNumberQuery = "UPDATE PhoneNumbers SET IsDeleted = 1 WHERE Id = @Id AND ContactId=@ContactId";
+            _genericDbHelper.DeleteRecord(updatePhoneNumberQuery, new SqlParameter("@Id", phoneId), new SqlParameter("@ContactId", contactId));
+        }
+        public void RestorePhoneNumber(string phoneNumberId, string contactId)
+        {
+            var phoneNumber = FetchPhoneNumberById(phoneNumberId);
+
+            if (phoneNumber == null)
+            {
+                throw new ArgumentNullException("Object is null or phone number does not exist");
+            }
+
+            string updatePhoneNumberQuery = "UPDATE PhoneNumbers SET IsDeleted = 0 WHERE Id = @Id AND ContactId=@ContactId";
+            _genericDbHelper.DeleteRecord(updatePhoneNumberQuery, new SqlParameter("@Id", phoneNumberId), new SqlParameter("@ContactId", contactId));
         }
         private PhoneNumber MapPhoneNumber(SqlDataReader reader)
         {
@@ -87,5 +111,6 @@ namespace AddressBook.ORM.OrmLayer
                 PhoneType = Enum.TryParse<PhoneType>(reader["PhoneType"].ToString(), out var phoneType) ? phoneType : PhoneType.Other
             };
         }
+       
     }
 }

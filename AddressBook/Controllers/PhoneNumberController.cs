@@ -43,5 +43,12 @@ namespace AddressBook.Controllers
             _dbHelper.DeletePhoneNumber(phoneNumberId, contactId);
             return NoContent();
         }
+
+        [HttpPut("/RestoreNumber")]
+        public IActionResult RestorePhoneNumber(string phoneNumberId, string contactId)
+        {
+            _dbHelper.RestorePhoneNumber(phoneNumberId, contactId);
+            return NoContent();
+        }
     }
 }

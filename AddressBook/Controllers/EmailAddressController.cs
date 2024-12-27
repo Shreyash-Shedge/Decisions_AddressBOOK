@@ -41,5 +41,12 @@ namespace AddressBook.Controllers
             _dbHelper.DeleteEmailAddress(emailId, contactId);
             return NoContent();
         }
+
+        [HttpPut("/RestoreEmail")]
+        public IActionResult RestoreEmailAddress(string emailId, string contactId)
+        {
+            _dbHelper.RestoreEmailAddress(emailId, contactId);
+            return NoContent();
+        }
     }
 }

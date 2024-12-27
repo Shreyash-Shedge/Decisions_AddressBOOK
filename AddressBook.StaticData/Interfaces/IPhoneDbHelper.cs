@@ -13,5 +13,6 @@ namespace AddressBook.ORM.Interfaces
         void AddPhoneNumber(PhoneNumber phoneNumber);
         void UpdatePhoneNumber(PhoneNumber phoneNumber);
         void DeletePhoneNumber(string phoneId, string contactId);
+        void RestorePhoneNumber(string phoneNumberId, string contactId);
     }
 }
